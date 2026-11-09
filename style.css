@@ -1,6 +1,96 @@
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
+  background-color: #0b0f19;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* BARRA PINNATA STICKY IN ALTO */
+#sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(11, 15, 25, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e293b;
+  padding: 18px 45px 16px 45px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.5px;
+}
+
+/* BOX DELLA GUIDA AL GLIFO */
+.legend-box {
+  background-color: #121826;
+  border: 1px solid #28354c;
+  border-radius: 8px;
+  padding: 11px 18px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: #cbd5e1;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-key {
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* GRADIENTE TERMICO */
+.thermal-bar {
+  width: 110px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #40c4ff, #ffd166, #ef476f);
+  display: inline-block;
+}
+
+/* BARRA DI STATO HOVER */
+#status-bar {
+  margin-top: 18px;
+  padding: 7px 14px;
+  background-color: #0f1420;
+  border: 1px solid #28354c;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #94a3b8;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.15s ease;
+}
+
+#status-bar.active {
+  border-color: #38bdf8;
+  color: #f8fafc;
+}
+
+#canvas-container {
+  width: 100%;
+  display: block;
 }
 
 canvas {

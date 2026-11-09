@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Rivers of the World</title>
+  
+  <!-- CDN ufficiale p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <!-- Collegamento al file CSS esterno -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <title>Sketch</title>
+  <!-- BARRA STICKY FISSA -->
+  <header id="sticky-header">
+    <h1 class="title">RIVERS OF THE WORLD</h1>
+    
+    <div class="legend-box">
+      <span style="font-weight: 700; color: #fff;">COME LEGGERE IL GLIFO:</span>
+      <div class="legend-item"><span class="legend-key">Ampiezza spirale</span> = Area bacino (km²)</div>
+      <div class="legend-item"><span class="legend-key">Spessore</span> = Portata (m³/s)</div>
+      <div class="legend-item"><span class="legend-key">Increspature</span> = Numero di affluenti</div>
+      <div class="legend-item">
+        <span class="legend-key">Colore </span>
+        <span>= Temperatura: -7.5°C</span>
+        <span class="thermal-bar"></span>
+        <span>+27.5°C</span>
+      </div>
+    </div>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <div id="status-bar">
+      Passa su una spirale con il cursore per esaminare i dati riguardanti il fiume.
+    </div>
+  </header>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+  <!-- CONTENITORE CANVAS P5.JS -->
+  <div id="canvas-container"></div>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <!-- Script del canvas p5.js -->
+  <script src="sketch.js"></script>
+</body>
 </html>
